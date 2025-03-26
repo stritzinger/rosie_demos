@@ -1,0 +1,16 @@
+{application, fragment_listener, [
+    {description, "Example fragment listener"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {fragment_listener_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        rosie_rclerl,
+        std_msgs
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.
