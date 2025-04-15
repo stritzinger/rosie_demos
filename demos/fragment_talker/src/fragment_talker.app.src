@@ -1,0 +1,16 @@
+{application, fragment_talker, [
+    {description, "Example fragment talker"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {fragment_talker_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        rosie_rclerl,
+        std_msgs
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.

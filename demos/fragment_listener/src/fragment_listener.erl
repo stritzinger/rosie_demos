@@ -29,8 +29,8 @@ init(_) ->
 handle_call(_, _, S) ->
     {reply, ok, S}.
 
-handle_cast({on_topic_msg, #std_msgs_byte_multi_array{data = Msg}}, S) ->
-    io:format("ROSIE: [frag_listener]: I receive a byte array of length: ~p\n", [length(Msg)]),
+handle_cast({on_topic_msg, #std_msgs_byte_multi_array{data = Data}}, S) ->
+    io:format("ROSIE: [frag_listener]: I receive a byte array of length: ~p\n", [length(Data)]),
     {noreply, S};
 handle_cast(C, S) ->
     io:format("ROSIE: [frag_listener]: uhandled cast: ~p\n", [C]),
